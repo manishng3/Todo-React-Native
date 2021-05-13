@@ -20,7 +20,7 @@
  import { createDrawerNavigator } from '@react-navigation/drawer';
  import { NavigationContainer } from '@react-navigation/native';
  
- import LoginScreen from './/src/screens/LoginScreen'
+ import LoginScreen from './src/containers/loginContainer'
  import SignupScreen from "./src/screens/SignupScreen"
 
 

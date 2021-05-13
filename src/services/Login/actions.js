@@ -8,10 +8,10 @@ import {
 import {BASE_URL, USERS, AUTHENTICATE} from '../constants';
 
 export const loginUser = (userCredentials) => (dispatch) => {
-    console.log("Action",userCredentials)
-    const [userName,password] = userCredentials;
-    const response = fetch(`${URL + AUTHENTICATE}` , {
-         method: 'POST',
+    const {userName,password} = userCredentials;
+    console.log("Action",userName+password);
+    const response = fetch(`${BASE_URL + AUTHENTICATE}` , {
+  method: 'POST',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'
@@ -24,15 +24,15 @@ export const loginUser = (userCredentials) => (dispatch) => {
     .then((json) => {
         if(json.status)
         {
-          dispatch({type:LOGIN})
+          // dispatch({type:LOGIN})
             console.log("Success",json);
         }else {
-          dispatch({type:LOGIN})
+          // dispatch({type:LOGIN})
             console.log("Error",json);
         }
     })
     .catch((error) => {
-      dispatch({type:LOGIN})
+      // dispatch({type:LOGIN})
         console.error(error);
       });
 }

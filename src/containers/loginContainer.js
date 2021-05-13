@@ -6,10 +6,10 @@ const mapStateToProps = (state) => {
 
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
     loginUser : (userCredentials) => 
     dispatch(loginUser(userCredentials))
-}
+});
 
 const LoginContainer = connect(mapStateToProps,mapDispatchToProps)(LoginScreen);
 export default LoginContainer;
